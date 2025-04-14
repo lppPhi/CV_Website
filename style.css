@@ -1,0 +1,379 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif; /* Modern font */
+    background-color: #f0f2f5; /* Light background for the page */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the top */
+    min-height: 100vh;
+    padding: 20px; /* Add padding around the container */
+}
+
+/* Portfolio Container */
+.portfolio-container {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    background-color: #fff; /* White background for the main content area */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden; /* Ensure content stays within rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+}
+
+.portfolio-container:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Left Column Styles */
+.left-column {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Techy gradient */
+    color: #ecf0f1; /* Light text color */
+    width: 35%; /* Adjust width as needed */
+    padding: 40px 30px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    text-align: center;
+}
+
+.profile-section {
+    margin-bottom: 30px;
+}
+
+.profile-pic {
+    width: 150px; /* Adjust size */
+    height: 150px;
+    border-radius: 50%; /* Circular image */
+    border: 5px solid #e67e22; /* Accent color border */
+    object-fit: cover; /* Ensure image covers the area */
+    margin-bottom: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
+
+.left-column h1 {
+    font-size: 2em; /* Larger name */
+    margin-bottom: 5px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.left-column .title {
+    font-size: 1.1em;
+    color: #e67e22; /* Accent color for title */
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.section {
+    margin-bottom: 30px;
+    width: 100%; /* Ensure sections take full width */
+    text-align: left; /* Align text left within sections */
+}
+
+.section-title {
+    font-size: 1.4em;
+    color: #e67e22; /* Accent color */
+    border-bottom: 2px solid #e67e22;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    display: inline-block; /* Make border only as wide as text */
+    font-weight: 600;
+}
+
+.left-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.left-column ul li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center; /* Vertically align icon and text */
+    font-size: 0.95em;
+    transition: color 0.3s ease;
+}
+
+.left-column ul li i {
+    color: #e67e22; /* Accent color for icons */
+    margin-right: 12px;
+    width: 20px; /* Fixed width for alignment */
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.left-column ul li:hover {
+    color: #f1c40f; /* Lighter color on hover */
+}
+.left-column ul li:hover i {
+    transform: scale(1.2); /* Icon scale on hover */
+}
+
+
+/* Right Column Styles */
+.right-column {
+    width: 65%; /* Adjust width as needed */
+    padding: 40px 50px;
+    background-color: #ffffff; /* White background */
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.section-title-right {
+    font-size: 1.8em;
+    color: #34495e; /* Darker color for right titles */
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 10px;
+    font-weight: 700;
+}
+
+/* Underline effect for right titles */
+.section-title-right::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px; /* Width of the underline */
+    height: 4px;
+    background-color: #e67e22; /* Accent color */
+    border-radius: 2px;
+}
+
+.right-column .section {
+    margin-bottom: 40px;
+}
+
+.objectives ul {
+    list-style: none;
+    padding-left: 5px;
+}
+
+.objectives ul li {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: flex-start; /* Align icon top with text */
+}
+
+.objectives ul li i {
+    color: #e67e22;
+    margin-right: 15px;
+    margin-top: 4px; /* Align icon slightly lower */
+    font-size: 1.1em;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 100px; /* Space for the timeline line */
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    bottom: 5px;
+    width: 3px;
+    background-color: #e67e22; /* Accent color line */
+    border-radius: 2px;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+    padding-left: 25px; /* Space between line and content */
+}
+
+.timeline-item::before { /* Timeline dots */
+    content: '';
+    position: absolute;
+    left: -5px; /* Position on the main line */
+    top: 5px;
+    width: 13px;
+    height: 13px;
+    background-color: #ffffff; /* White background for dot */
+    border: 3px solid #e67e22; /* Accent color border */
+    border-radius: 50%;
+    z-index: 1; /* Above the line */
+    transition: background-color 0.3s ease;
+}
+
+.timeline-item:hover::before {
+    background-color: #e67e22; /* Fill dot on hover */
+}
+
+
+.timeline-date {
+    position: absolute;
+    left: -100px; /* Position date to the left */
+    top: 3px;
+    background-color: #34495e; /* Match left column */
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 5px;
+    font-size: 0.85em;
+    font-weight: 600;
+    width: 80px; /* Fixed width */
+    text-align: center;
+}
+
+.timeline-content h3 {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.timeline-content p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* Education Styles */
+.education-item {
+    margin-bottom: 20px;
+    padding-left: 10px; /* Slight indent */
+    border-left: 3px solid #e67e22; /* Accent border */
+    padding-left: 20px;
+}
+
+.education-item h3 {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.education-item p {
+    font-size: 0.95em;
+    color: #555;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+.education-item p i {
+    margin-right: 10px;
+    color: #e67e22;
+    width: 16px; /* Align icons */
+}
+
+
+/* Animation Styles (Fade In on Scroll) */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px); /* Start slightly lower */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .portfolio-container {
+        flex-direction: column; /* Stack columns */
+        max-width: 600px; /* Adjust max-width for smaller screens */
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        border-radius: 0; /* Remove specific corner radius */
+    }
+
+    .left-column {
+        border-top-left-radius: 15px; /* Keep top corners rounded */
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0;
+        padding: 30px 20px;
+        text-align: center; /* Center text on small screens */
+    }
+
+    .left-column .section {
+        text-align: left; /* Keep section text left-aligned */
+    }
+    .left-column .section-title{
+        display: block; /* Allow title border to span width */
+        text-align: center;
+    }
+
+
+    .right-column {
+        border-bottom-left-radius: 15px; /* Keep bottom corners rounded */
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 0;
+        padding: 30px 30px;
+    }
+
+    .timeline-date {
+        position: static; /* Reset date position */
+        background-color: transparent;
+        color: #e67e22; /* Change date color */
+        padding: 0;
+        font-weight: 700;
+        margin-bottom: 5px;
+        width: auto;
+        text-align: left;
+        font-size: 0.9em;
+    }
+
+     .timeline::before {
+         left: 5px; /* Adjust line position */
+     }
+     .timeline-item {
+         padding-left: 15px; /* Adjust content padding */
+     }
+    .timeline-item::before {
+        left: -4px; /* Adjust dot position */
+         width: 11px;
+         height: 11px;
+    }
+}
+
+@media (max-width: 576px) {
+    body {
+        padding: 10px; /* Less padding on very small screens */
+    }
+    .left-column h1 {
+        font-size: 1.8em;
+    }
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+    }
+    .section-title, .section-title-right {
+        font-size: 1.3em;
+    }
+    .right-column {
+        padding: 25px 20px;
+    }
+    .left-column ul li, .objectives ul li, .timeline-content p, .education-item p {
+        font-size: 0.9em; /* Slightly smaller text */
+    }
+
+     .timeline-item::before {
+        left: -5px; /* Adjust dot position */
+     }
+}
